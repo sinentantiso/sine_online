@@ -5,3 +5,5 @@ const Routers = () => {
     <div>Routers</div>
   )
 }
+
+export default Routers;
