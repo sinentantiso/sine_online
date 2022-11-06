@@ -1,6 +1,7 @@
 import React from "react";
-import "./header.css";
+import "./Header.css";
 
+import {logo} from "../../Assets/images";
 import {container, Row } from "reactstrap";
 
 const Header = () => {
