@@ -4,9 +4,15 @@ import "./header.css";
 import {container, Row } from "reactstrap";
 
 const Header = () => {
-  return(
-    <div>Header</div>
-  )
+  return <header className="header">
+    <container>
+      <div className="nav__wrapper"> 
+        <div className="logo">
+
+        </div>
+      </div>
+    </container>   
+  </header>
 }
 
 export default Header;
