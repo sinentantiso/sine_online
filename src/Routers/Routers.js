@@ -1,4 +1,5 @@
 import React from "react";
+import {Routes, Route } from "react-router-dom"
 import Cart from "../Pages/Cart";
 import Checkout from "../Pages/Checkout";
 import Home from "../Pages/Home";
@@ -9,9 +10,9 @@ import Signup from "../Pages/Signup";
 
 
 const Routers = () => {
-  return(
-    <div>Routers</div>
-  )
+  return <Routes>
+    <Route path="home" element={<Home/>}/>
+  </Routes>
 }
 
 export default Routers;
