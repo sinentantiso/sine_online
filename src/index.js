@@ -1,6 +1,7 @@
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import "remixicon/fonts/remixicon.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 import App from './App';
