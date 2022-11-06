@@ -1,9 +1,15 @@
 import React from "react";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import Routers from "../ ../Routers/Routers";
 
 const Layout = () => {
-  return(
-    <div>Layout</div>
-  )
+  return <>
+    <Header/>
+    <div>
+      <Routers />
+    </div>
+  </>
 }
 
 export default Layout
