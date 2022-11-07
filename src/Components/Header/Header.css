@@ -64,4 +64,8 @@
     display: none;
 }
 
+.nav__active {
+    font-weight: 600;
+    
+}
 

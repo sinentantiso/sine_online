@@ -5,10 +5,25 @@ import {NavLink} from "react-router-dom";
 import logo from "../../assets/images/eco-logo.png";
 import userIcon from "../../assets/images/user-icon.png"
 
-import {container, Row } from "reactstrap";
+import { Container, Row } from "reactstrap";
+
+const Nav__Links = [
+  {
+    path: "home",
+    display: "Home"
+  },
+  {
+    path: "shop",
+    display: "Shop"
+  },
+  {
+    path: "cart",
+    display: "Cart"
+  }
+]
 
 const Header = () => {
-  return <header className="header">
+  return (<header className="header">
     <container>
       <Row>
         <div className="nav__wrapper"> 
@@ -22,15 +37,14 @@ const Header = () => {
 
             <div className="navigation">
               <ul className="menu">
-                <li className="nav__item">
-                  <NavLink to="home">Home</NavLink>
-                </li>
-                <li className="nav__item">
-                  <NavLink to="shop">Shop</NavLink>
-                </li>
-                <li className="nav__item">
-                  <NavLink to="cart">Cart</NavLink>
-                </li>
+                {
+                  Nav__Link.map(item.index)=>(
+                    <li className="nav__item" key={index}>
+                      <NavLink to={item.path} className={(navClass)=>
+                      navClass.isActive ? "nav__active": }>{item.display}</NavLink>
+                    </li>
+                  ))
+                {"}"}
               </ul>
             </div>
 
@@ -52,6 +66,7 @@ const Header = () => {
       </Row>
     </container>   
   </header>
+  )
 }
 
 export default Header;
