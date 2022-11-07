@@ -2,7 +2,9 @@ import React from "react";
 import "./Header.css";
 
 import {NavLink} from "react-router-dom";
-import logo from "../../Assets/images/eco-logo.png";
+import logo from "../../assets/images/eco-logo.png";
+import userIcon from "../../assets/images/user-icon.png"
+
 import {container, Row } from "reactstrap";
 
 const Header = () => {
@@ -37,6 +39,14 @@ const Header = () => {
               <span className="fav__icon"><i class="ri-heart-fill"></i></span>
               <span className="cart__icon"><i 
               class="ri-shopping-bag-fill"></i></span>
+
+              <span><img src={userIcon} alt="" /></span>
+            </div>
+
+            <div className="mobile__menu">
+              <span>
+                <i class="ri-menu-line"></i>
+              </span>
             </div>
         </div>
       </Row>
