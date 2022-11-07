@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./App.css";
 import Layout from "./Components/Layout/Layout";
 
 export default function App() {
