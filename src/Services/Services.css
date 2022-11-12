@@ -3,7 +3,7 @@
     background: var(--card-bg-01);
     display: flex;
     align-items: center;
-    column-gap: 0.5rem;
+    column-gap: 0.7rem;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -27,5 +27,4 @@
     font-size: .9rem;
     margin-top: 5px;
     color: #222;
-    
 }

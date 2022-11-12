@@ -2,16 +2,29 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {motion} from "framer-motion"
 
+import "/Services.css";
+import serviceData from "../assets/data/serviceData";
+
 const Services () =>{
     return( 
     <Section className="service">
         <Container>
             <Row>
-              <Col lg="3" md="4">
-                <div className="services__item">
-                 
-                </div>
-              </Col>
+            {
+                serviceData.map((item,index)=>(
+                <Col lg="3" md="4">
+                    <div className="services__item">
+                        <span>
+                            <i className={item.icon}></i>
+                        </span>
+                        <div>
+                         <h3>{item.title}</h3>
+                         <p>{item.subtitle}</p>
+                        </div>
+                    </div>
+                </Col>            
+                ))
+            }
             </Row>
         </Container>
     </Section>
