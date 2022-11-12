@@ -37,7 +37,10 @@ const Header = () => {
 
             <div className="navigation">
               <ul className="menu">
-                
+                <li className="nav__item" key={index}>
+                  <NavLink to={item.path} className={(navClass) =>
+                  navClass.isActive ? "nav__item" : ""}></NavLink> 
+                </li>
               </ul>
             </div>
 
@@ -47,7 +50,9 @@ const Header = () => {
               <span className="cart__icon"><i 
               class="ri-shopping-bag-fill"></i></span>
 
-              <span><img src={userIcon} alt="" /></span>
+              <span>
+                <motion.img whileTap={{scale:1.2}} src={userIcon} alt="" />
+              </span>
             </div>
 
             <div className="mobile__menu">

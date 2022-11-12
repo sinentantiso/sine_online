@@ -11,6 +11,7 @@ import Signup from "../Pages/Signup";
 
 const Routers = () => {
   return <Routes>
+    <Routes path="/" element={<navigate to="/home" />}/>
     <Route path="home" element={<Home/>}/>
     <Route path="shop" element={<Shop/>}/>
     <Route path="shop:id" element={<ProductDetails/>}/>
@@ -18,7 +19,7 @@ const Routers = () => {
     <Route path="checkout" element={<Checkout/>}/>
     <Route path="login" element={<Login/>}/>
     <Route path="signup" element={<Signup/>}/>
-    
+   
   </Routes>
 }
 
