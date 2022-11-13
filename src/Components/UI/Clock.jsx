@@ -1,6 +1,21 @@
-import React from "react";
+import React, (useState, useEffect) from "react";
 
 const Clock = () => {
+
+    const [days, setDays] = useState ();
+    const [hours, setHours] = useState ();
+    const [minutes, setMinutes] = useState ();
+    const [seconds, setSeconds] = useState ();
+
+    let interval;
+    const countDown = () =>{
+        const destination = new Date ("Nov 14, 2022").getTime()
+
+        interval = setInterval (()=>{
+            const now= new Date ().getTime()getTime ()
+        })
+    }
+
     return (
     <div className="clock_wrapper d-flex align-item-center gap-3">
        <div className="clock__data d-flex align-item-center gap-3">
