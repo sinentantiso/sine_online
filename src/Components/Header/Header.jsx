@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import "./Header.css";
 
 import {NavLink} from "react-router-dom";
+import {motion} from "framer-motion";
 import logo from "../../assets/images/eco-logo.png";
 import userIcon from "../../assets/images/user-icon.png"
 
@@ -23,6 +24,18 @@ const Nav__Links = [
 ]
 
 const Header = () => {
+
+  const headerRef = useRef(null)
+  const stickyHeaderFunc = () =>{
+    window.addEventListiner("scroll", ()=> {
+      if(document.body.scrollTo)
+    })
+  }
+
+  useEffect(() =>{
+
+  })
+
   return (<header className="header">
     <container>
       <Row>
@@ -31,7 +44,6 @@ const Header = () => {
             <img src={logo} alt="logo"/>
             <div>
               <h1>Sine-Online</h1>
-              <p>since 2022</p>
             </div>
           </div>
 
@@ -53,12 +65,11 @@ const Header = () => {
               <span>
                 <motion.img whileTap={{scale:1.2}} src={userIcon} alt="" />
               </span>
-            </div>
-
-            <div className="mobile__menu">
-              <span>
-                <i class="ri-menu-line"></i>
-              </span>
+              <div className="mobile__menu">
+                <span>
+                  <i class="ri-menu-line"></i>
+                </span>
+              </div>    
             </div>
         </div>
       </Row>

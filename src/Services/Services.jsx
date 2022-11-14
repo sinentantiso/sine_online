@@ -5,7 +5,7 @@ import {motion} from "framer-motion"
 import "/Services.css";
 import serviceData from "../assets/data/serviceData";
 
-const Services () =>{
+const Services = () =>{
     return( 
     <Section className="service">
         <Container>
