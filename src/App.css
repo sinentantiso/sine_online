@@ -31,7 +31,12 @@ img {
   width: 100%;
 }
 
-section {
+.section {
   padding: 60px 0;
   
+}
+
+.section title {
+  color: var(--primary-color);
+  font-weight: 600;
 }

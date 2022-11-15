@@ -25,18 +25,30 @@ const Nav__Links = [
 
 const Header = () => {
 
-  const headerRef = useRef(null)
+  const headerRef = useRef(null);
+  const menuRef = useRef(null);
+
   const stickyHeaderFunc = () =>{
     window.addEventListiner("scroll", ()=> {
-      if(document.body.scrollTo)
+      if(
+        document.body.scrollTo > 70 ||
+        document.documentElement.scrollTo > 80
+        ){
+          headerRef.current.classList.add("sticky__header");
+        }else {
+          headerRef.current.classList.remove("sticky__header");
+        }
     })
   }
 
   useEffect(() =>{
+    stickyHeaderFunc();
+    return () => window.removeEventListener("scroll", stickyHeaderFunc);
+  });
 
-  })
+  const menuToggle = () => menuRef.current.classLists.toggle("active__menu");
 
-  return (<header className="header">
+  return (<header className="header" ref={headerRef}>
     <container>
       <Row>
         <div className="nav__wrapper"> 
@@ -47,14 +59,17 @@ const Header = () => {
             </div>
           </div>
 
-            <div className="navigation">
-              <ul className="menu">
-                <li className="nav__item" key={index}>
-                  <NavLink to={item.path} className={(navClass) =>
-                  navClass.isActive ? "nav__item" : ""}></NavLink> 
-                </li>
-              </ul>
-            </div>
+          <div className="navigation" ref={menuRef} onClick={menuToggle}>
+            <ul className="menu">
+              {Nav__Links.map((item,index) => (
+                 <li className="nav__item" key={index}>
+                    <NavLink to={item.path} className={(navClass) =>
+                      navClass.isActive ? "nav__item" : ""}>
+                    </NavLink> 
+                 </li>
+              ))}
+            </ul>
+          </div>
 
             <div className="Nav__icons">
 
@@ -66,7 +81,7 @@ const Header = () => {
                 <motion.img whileTap={{scale:1.2}} src={userIcon} alt="" />
               </span>
               <div className="mobile__menu">
-                <span>
+                <span onClick={menuToggle}>
                   <i class="ri-menu-line"></i>
                 </span>
               </div>    

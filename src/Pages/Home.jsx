@@ -58,7 +58,16 @@ const Home = () => {
           <Col lg="6" mg="6">
             <div className="hero__content">
               <p className="hero__subtitle">Trending product in {year}</p>
+              <h2>Make your interior more minimalistic and modern</h2>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Atque, reiciendis? Vero laudantium recusandae fugiat, animi eligendi iste dolore dolorum quidem totam blanditiis quam minima ipsa asperiores minus, 
+                aperiam at ab sed voluptas assumenda. Cupiditate perferendis odit magni possimus vel sapiente, 
+                error numquam iste repudiandae qui! Ipsam hic debitis tempora adipisci!
+              </p>
 
+              <motion.button whileTap={{ scale: 1.2}} className="buy__button">
+                <Link to="/shop">SHOP NOW</Link>
+              </motion.button>
             </div>
           </Col>
         </Row>
