@@ -1,44 +1,41 @@
 import React from "react";
 
-import {Link} from "react-router-dom";
-import {motion} from "framer-motion";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import Helmet from "../Components/Helmet/Helmet";
-import { Container, Row,Col } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 
 import Clock from "../Components/UI/Clock";
 import counterImg from "../assets/images/counter-timer-img.png";
 
-
 const Home = () => {
-
   const [trendingProducts, setTrendingProducts] = useState([]);
   const [bestSalesProducts, setBestSalesProducts] = useState([]);
   const [mobileProducts, setMobileProducts] = useState([]);
   const [wirelessProducts, setWirelessProducts] = useState([]);
   const [popularProducts, setPopularProducts] = useState([]);
 
-
   const year = new Date().getFullYear();
 
   useEffect(() => {
-    const filteredTrendingProducts = products.filter (
+    const filteredTrendingProducts = products.filter(
       (item) => item.catergory === "chair"
     );
 
-    const filteredBestSalesProducts = products.filter (
+    const filteredBestSalesProducts = products.filter(
       (item) => item.catergory === "sofa"
     );
 
-    const filteredMobileProducts = products.filter (
+    const filteredMobileProducts = products.filter(
       (item) => item.catergory === "mobile"
     );
 
-    const filteredWirelessProducts = products.filter (
+    const filteredWirelessProducts = products.filter(
       (item) => item.catergory === "wireless"
     );
 
-    const filteredPopularProducts = products.filter (
+    const filteredPopularProducts = products.filter(
       (item) => item.catergory === "watch"
     );
 
@@ -47,11 +44,9 @@ const Home = () => {
     setMobileProducts(filteredMobileProducts);
     setWirelessProducts(filteredWirelessProducts);
     setPopularProducts(filteredPopularProducts);
-
   }, []);
 
-
-  return(
+  return (
     <Helmet title={"home"}>
       <Container>
         <Row>
@@ -59,13 +54,17 @@ const Home = () => {
             <div className="hero__content">
               <p className="hero__subtitle">Trending product in {year}</p>
               <h2>Make your interior more minimalistic and modern</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Atque, reiciendis? Vero laudantium recusandae fugiat, animi eligendi iste dolore dolorum quidem totam blanditiis quam minima ipsa asperiores minus, 
-                aperiam at ab sed voluptas assumenda. Cupiditate perferendis odit magni possimus vel sapiente, 
-                error numquam iste repudiandae qui! Ipsam hic debitis tempora adipisci!
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque,
+                reiciendis? Vero laudantium recusandae fugiat, animi eligendi
+                iste dolore dolorum quidem totam blanditiis quam minima ipsa
+                asperiores minus, aperiam at ab sed voluptas assumenda.
+                Cupiditate perferendis odit magni possimus vel sapiente, error
+                numquam iste repudiandae qui! Ipsam hic debitis tempora
+                adipisci!
               </p>
 
-              <motion.button whileTap={{ scale: 1.2}} className="buy__button">
+              <motion.button whileTap={{ scale: 1.2 }} className="buy__button">
                 <Link to="/shop">SHOP NOW</Link>
               </motion.button>
             </div>
@@ -78,7 +77,7 @@ const Home = () => {
             <Col lg="12" className="text-center">
               <h2 className="section__title">Best sales</h2>
             </Col>
-            <ProductList data={bestSalesProduct}/>
+            <ProductList data={bestSalesProduct} />
           </Row>
         </Container>
       </Section>
@@ -88,14 +87,29 @@ const Home = () => {
             <Col lg="12" className="text-center">
               <h2 className="section__title">Best sales</h2>
             </Col>
-            <ProductList data={bestSalesProduct}/>
+            <ProductList data={bestSalesProduct} />
           </Row>
         </Container>
       </Section>
       <Section className="timer__count">
         <Container>
           <Row>
-            
+            <Col lg="6" mg="12" className="count__down-col">
+              <div className="clock__top-content">
+                <h4 className="text-white fs-6 mb-2">Limited Offers</h4>
+                <h3 className="text-white fs-5 mb-2">Quality Armchairs</h3>
+              </div>
+              <Clock />
+              <motion.button
+                whileTap={{ scale: 1.2 }}
+                className="buy__btn store__btn"
+              >
+                <Link to="/shop">Visit Store</Link>
+              </motion.button>
+            </Col>
+            <Col lg="6" mg="12" className="text-end counter__img">
+              <img src={counterImg} alt="" />
+            </Col>
           </Row>
         </Container>
       </Section>
@@ -105,23 +119,23 @@ const Home = () => {
             <Col lg="12" className="text-center mb-5">
               <h2 className="section__title">New Arricals</h2>
             </Col>
-            <ProductList data={mobileProducts}/>
-            <ProductList data={wirelessProducts}/>
+            <ProductList data={mobileProducts} />
+            <ProductList data={wirelessProducts} />
           </Row>
         </Container>
       </Section>
       <Section className="popular__catergory">
-      <Container>
+        <Container>
           <Row>
             <Col lg="12" className="text-center mb-5">
               <h2 className="section__title">Popular in catergory</h2>
             </Col>
-            <ProductList data={popularProducts}/>
+            <ProductList data={popularProducts} />
           </Row>
         </Container>
       </Section>
     </Helmet>
-  )
-}
+  );
+};
 
 export default Home;
