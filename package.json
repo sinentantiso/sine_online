@@ -5,5 +5,24 @@
     "react-router-dom": "^6.4.3",
     "reactstrap": "^9.1.5",
     "remixicon-react": "^1.0.0"
-  }
+  },
+  "name": "sine_online",
+  "description": "[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-wj8dg9)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinentantiso/sine_online.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sinentantiso/sine_online/issues"
+  },
+  "homepage": "https://github.com/sinentantiso/sine_online#readme"
 }
