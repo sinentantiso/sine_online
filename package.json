@@ -3,6 +3,7 @@
     "bootstrap": "^5.2.3",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
+    "react-scripts": "^5.0.1",
     "reactstrap": "^9.1.5",
     "remixicon-react": "^1.0.0"
   },
@@ -10,7 +11,6 @@
   "description": "[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-wj8dg9)",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
