@@ -25,7 +25,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "react-scripts test"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
